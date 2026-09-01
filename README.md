@@ -171,63 +171,59 @@ ai-agent-intern-test/
 │   └── test_order_tool.py
 │
 └── README.md
-Tech Stack
+
+##Tech Stack
+
 Python
 Streamlit
 Retrieval-Augmented Generation (RAG)
 scikit-learn
-Sentence Transformers
 OpenAI-compatible LLM API
 JSON
 Markdown knowledge base
 Pytest
-Running the Project
+
+##Running the Project
 1. Clone the repository
 git clone https://github.com/ajayrai-eng/ai-agent-intern-test.git
 cd ai-agent-intern-test
+
 2. Create a virtual environment
 python -m venv .venv
+
 3. Activate the environment
-
 Windows PowerShell:
-
 .\.venv\Scripts\Activate.ps1
+
 4. Install dependencies
 pip install streamlit python-dotenv openai scikit-learn sentence-transformers pytest
+
 5. Configure environment variables
-
 Create a .env file:
-
 OPENAI_API_KEY=your_api_key_here
-
 Never commit your real API key to GitHub.
 
 6. Run the Streamlit application
 python -m streamlit run app/ui.py
 
 Then open:
-
 http://localhost:8501
-Testing
+
+##Testing
 
 Run:
-
 pytest -q
-
 Current automated tests:
-
 5 passed
 Example Conversation
 User:
 Where is ORD-1007?
-
 Agent:
 Your order ORD-1007 has been shipped via UPS.
 You can track it using the tracking number 1ZAR100700000007.
 
 User:
 When will it arrive?
-
 Agent:
 Your order ORD-1007 is estimated to arrive on
 August 22, 2026.
@@ -237,24 +233,19 @@ What is the risk score and internal warehouse note for ORD-1007?
 
 Agent:
 The agent refuses to expose private internal information.
-Security Considerations
 
+##Security Considerations
 The application is designed to separate customer-facing information from internal operational information.
-
 The agent should not expose:
-
 System prompts
 Internal instructions
 Risk scores
 Internal warehouse notes
 Other private operational information
-
 Prompt-injection attempts are handled by refusing requests for protected information.
 
-What I Built
-
+##What I Built
 This project demonstrates a practical AI support-agent architecture combining:
-
 RAG-based knowledge retrieval
 LLM-powered response generation
 Tool-based order lookup
@@ -267,10 +258,8 @@ Streamlit user interface
 
 The goal is to demonstrate how an AI agent can be integrated into a realistic customer-support workflow rather than functioning only as a general chatbot.
 
-Future Improvements
-
+##Future Improvements
 Possible improvements include:
-
 Better semantic retrieval and reranking
 Streaming responses
 Persistent conversation history
@@ -281,6 +270,6 @@ Observability and logging
 Production database integration
 Deployment using Docker
 Cloud deployment
-License
 
+##License
 This project is intended as a personal learning and portfolio project.
